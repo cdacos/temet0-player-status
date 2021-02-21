@@ -4,7 +4,9 @@
 
 schedule function player_status:second 1s
 
-scoreboard players add @a playerStatus.checkAFK 1
+scoreboard players add @a afkDis.checkAFK 1
 
-execute as @a[scores={playerStatus.checkAFK=150..},team=!tg_tagged] at @s run function player_status:check_afk
-execute as @a[team=playerStatus.afk] at @s run function player_status:remove_afk
+execute as @a[scores={afkDis.checkAFK=150..},team=!tg_tagged] at @s run function player_status:check_afk
+execute as @a[team=afk_overworld] at @s run function player_status:remove_afk
+execute as @a[team=afk_nether] at @s run function player_status:remove_afk
+execute as @a[team=afk_end] at @s run function player_status:remove_afk
