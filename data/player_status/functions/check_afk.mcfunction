@@ -1,3 +1,4 @@
+#tellraw @a {"text":"...check_afk"}
 execute store result score @s afkDis.x2 run data get entity @s Pos[0] 100
 execute store result score @s afkDis.y2 run data get entity @s Pos[1] 100
 execute store result score @s afkDis.z2 run data get entity @s Pos[2] 100

@@ -1,4 +1,4 @@
-tellraw @a {"text":"...dimen_in"}
+#tellraw @a {"text":"...dimen_in"}
 execute as @a[nbt={Dimension:"minecraft:overworld"},team=!in_overworld] run team leave @s
 execute as @a[nbt={Dimension:"minecraft:overworld"},team=!in_overworld] run team join in_overworld @s
 

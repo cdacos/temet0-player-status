@@ -6,11 +6,9 @@ schedule function player_status:second 1s
 
 scoreboard players add @a afkDis.checkAFK 1
 
-execute as @a[scores={afkDis.checkAFK=5..}] at @s run function player_status:check_afk
+# To be AFK, you need to have been still for a while
+execute as @a[scores={afkDis.checkAFK=150..}] at @s run function player_status:check_afk
 
+# To handle changing dimensions, we enforce our team each iteration
 execute as @a[scores={afkDis.isAFK=1}] at @s run function player_status:remove_afk
-
-#execute as @a[scores={afkDis.isAFK=0}] 0 at @s run function player_status:dimen_in
-#execute as @a[scores={afkDis.isAFK=1}] 0 at @s run function player_status:dimen_afk
-
-tellraw @a {"text":"...checked"}
+execute as @a[scores={afkDis.isAFK=0}] at @s run function player_status:dimen_in
