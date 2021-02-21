@@ -11,6 +11,7 @@ scoreboard objectives remove afkDis.y2
 scoreboard objectives remove afkDis.z1
 scoreboard objectives remove afkDis.z2
 scoreboard objectives remove afkDis.checkAFK
+scoreboard objectives remove afkDis.isAFK
 
 team remove in_overworld
 team remove afk_overworld
